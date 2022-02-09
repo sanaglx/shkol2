@@ -196,7 +196,11 @@ function parallax1(event) {
     this.querySelectorAll('.prlx1').forEach(prlx1 => {
       let speed=prlx1.getAttribute('data-speed')
        // prlx1.style.transform =`translateY(${event.clientY*speed/1000}px)`
-    prlx1.style.transform =`translateY(${event.clientY/50}px)`
+    //prlx1.style.transform =`translateY(${event.clientY/50}px)`
+    //prlx1.style.backgroundPositionX =`background-position-x(${event.clientY/50}px)`
+    prlx1.style.backgroundPositionY =`${event.clientY/40+0}px`
+    prlx1.style.backgroundPositionX =`${event.clientX/40-95}px`
+    
         
   });
     
