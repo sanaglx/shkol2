@@ -1,0 +1,241 @@
+$maxWidth1: 1157;
+$maxWidth: 1900;
+
+@mixin font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    @media (max-width: $maxWidth+px) {
+        font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+    }
+    @media (min-width: $maxWidth+px) {
+        font-size: $pcSize + px;
+    }
+}
+.container {
+    max-width: $maxWidth1 + px;
+    margin: 0 auto;
+}
+.text-center{text-align: center;}
+
+h1,h2,.h1,.h2,.fz30 {
+    @include font(30, 18);
+    /*font-size: 1.87rem;*/
+    font-weight: 900;
+    line-height: 1.16;
+    color: var(--blue);
+}
+h3,.h3,.fz27 {
+    @include font(27, 20);
+    /*font-size: 1.31rem;*/
+    line-height: 1.2;
+    font-weight: 900;
+    color: var(--blue);
+}
+
+
+.mb095m{margin-bottom: 0.95rem;}
+.mb115m{margin-bottom: 1.15rem;}
+
+main {
+    min-height: calc(100vh - 417px);
+}
+
+.blur-svg {
+    /*width:367px; max-height:459px;*/
+    filter: url(../img/ico/blur.svg#blur);
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+.blur {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(9px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 19px;
+}
+
+.teni {
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 80;
+    display: none;
+}
+.teni.active {
+    display: block;
+}
+
+.br19 {
+    background-repeat: 19px;
+    overflow: hidden;
+}
+* {
+    outline: none;
+}
+a {
+    color: #1d4f95;
+    text-decoration: none;
+    &:hover {
+        color: var(--hover);
+    }
+}
+.btn {
+    font-size: 1.31rem;
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background: var(--blue);
+    padding: 0.5rem 20px 0.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+        opacity: 0.7;
+        color: var(--hover);
+    }
+}
+
+input.text {
+    border: none;
+    background: #ffffff;
+    box-shadow: 0px 2px 19px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 25 0.5rem;
+    font-size: 0.94rem;
+}
+.gr-inp {
+    position: relative;
+    width: 100%;
+}
+.error-x {
+    border: 1px solid red !important;
+}
+.error-text {
+    position: absolute;
+    color: red;
+    top: -25px;
+    left: 15px;
+}
+
+/** ui images**/
+/** пропорционально по высоте и ширине  для колонок***/
+.img-container-col {
+    margin: 0;
+    padding: 0 0 56% 0;
+    overflow: hidden;
+    position: relative;
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+/** пропорционально по высоте и ширине  для рядов***/
+.img-container-row {
+    flex: 0 0 100%;
+    position: relative;
+    min-height: 170px;
+    padding-bottom: 44%;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+/***/
+.thumb-wrap {
+    position: relative;
+    padding-bottom: 50.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+    height: 0;
+    overflow: hidden;
+    border-radius: 19px;
+    margin-bottom: 77px;
+}
+.thumb-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    outline-width: 0;
+}
+
+/**checkbox****/
+.checkbox-other {
+    display: block;
+    margin: 0 0 0px 0px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+.checkbox-other input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+}
+.checkbox-other span {
+    display: inline-block;
+    position: relative;
+    padding: 4px 0 0 40px;
+    line-height: 22px;
+    font-size: 13px;
+    margin-bottom: 2rem;
+}
+.checkbox-other span:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 29px;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+    background: url(../img/ico/check1.svg) center no-repeat;
+    box-shadow: 0px 1px 15px #ccc;
+}
+
+/* Checked */
+.checkbox-other input[type="checkbox"]:checked + span:before {
+    background: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/ico/check.svg);
+}
+
+/* Focus */
+.focused span:before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Hover */
+
+/* Active */
+.checkbox-other span:active:before {
+    filter: brightness(80%);
+}
+
+/* Disabled */
+.checkbox-other input[type="checkbox"]:disabled + span {
+    color: #666;
+    cursor: default;
+}
+.checkbox-other input[type="checkbox"]:disabled + span:before {
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
