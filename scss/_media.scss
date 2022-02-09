@@ -114,7 +114,10 @@
   }
 
   @media (max-width:383px) {
-
+    .tf-block-c img{
+      width: 100%;
+      max-width: 276px;
+    }
   }
 
     .top-btn{display: none;}

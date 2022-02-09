@@ -192,16 +192,17 @@ $('.hpala').click(function(){
 /********* */
 
 function parallax1(event) {
-    //console.log(this.querySelectorAll('.prlx-1'));
+
     this.querySelectorAll('.prlx1').forEach(prlx1 => {
-        let speed=prlx1.getAttribute('data-speed')
+      let speed=prlx1.getAttribute('data-speed')
        // prlx1.style.transform =`translateY(${event.clientY*speed/1000}px)`
-        prlx1.style.transform =`translateY(${event.clientY/50}px)`
+    prlx1.style.transform =`translateY(${event.clientY/50}px)`
         
-    });
+  });
     
 }
 document.addEventListener('mousemove',parallax1)
+//window.addEventListener('scroll',parallax1)
 
 
 // AOS.init({
