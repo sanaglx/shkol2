@@ -793,9 +793,93 @@ body {
 .modal.active{
   display: block;
 }
-@media (max-width: 1199px){
-  .container{padding: 0 15px;}
+
+
+.pref-page{
+  padding-bottom: 0;
+  margin-top: 1.5rem;
 }
+/*****/
+.bkg-head-block{
+  background-size:cover;
+  max-height: 565px;
+  height: auto;
+  width: 100%;
+  aspect-ratio: 16/4.75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.bkg-head-small-block{
+  max-width: 1170px;
+  background: #00395E;
+  mix-blend-mode: hard-light;
+  width: 100%;
+  margin: 0 5%;
+  h1{
+    color:#fff;
+    text-align: center;
+    mix-blend-mode: normal;
+    line-height: 4.8rem;
+  }
+}
+
+.page-partner {
+   padding: 3.3rem 0;
+   padding-bottom: 1.4rem;
+   background: #fff;
+  &__title {
+    @include font(30,18);
+    line-height: 1.3;
+    color:var(--blue);
+    margin-bottom: 0.7rem;
+    font-weight: 900;
+  }
+
+  &__text,
+  &__text p {
+    @include font(17,15);
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: -0.1px;
+  }
+
+  &__prefoot {
+    @include font(30,18);
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 3.2rem;
+    font-weight: 600;
+    color:var(--blue);
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2.5rem;
+
+    img{
+      max-height: 578px;
+      height: auto;
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+
+  }
+
+  &__footer {
+    @include font(30,18);
+    line-height: 1.3;
+    font-weight: 900;
+    color:var(--blue);
+    margin-bottom: 1.7rem;
+  }
+}
+
+
 
 @import "carousel";
 @import"heder";
