@@ -38,6 +38,9 @@
     .page-partner__prefoot{ margin-bottom: 1.8rem;}
     .page-partner__img {margin-bottom: 1.8rem;}
 
+    .row-img .im1 img{height: 106px;}
+    .row-img .im2 img{height:129px;}
+
   }
 
 @media (max-width:900px) {
@@ -109,6 +112,10 @@
         top: -1px;
       }    
     }
+    .row-img{flex-direction: column;}
+    .row-img .col-img-6 img {margin: 0rem 0 0rem;}
+    .row-img .im1 img{height: 106px;margin: 2rem 0 1rem;}
+    .row-img .im2 img{height:129px;margin: 0rem 0 2rem;}
       
      
   }

@@ -29,7 +29,7 @@ ul{
 [data-animation]{
   opacity: 0;
 }
-
+html{max-width: 1920px;overflow-x: hidden;margin: 0 auto;}
 body {
   position: relative;
   background-attachment: fixed;
@@ -559,9 +559,9 @@ body {
     width: 100%;
     height: 120%;
     position: fixed;
-    left: 0;
     top: -100px;
     z-index: -1;
+    max-width: 1920px;
   }
   &__block{
     height: 100%;
@@ -834,7 +834,7 @@ body {
   max-height: 565px;
   height: auto;
   width: 100%;
-  aspect-ratio: 16/4.75;
+  aspect-ratio: 16/4.7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -906,6 +906,47 @@ body {
     color:var(--blue);
     margin-bottom: 1.7rem;
   }
+}
+
+/***/
+.project{
+  background: #fff;
+  h2{
+    padding: 2rem 0 1.45rem;
+  }
+  .ttl{
+    text-transform: initial;
+  }
+}
+.slider-s1{
+  background: #fff;
+  padding-bottom: 3.5rem;
+}
+.row-img{
+  display: flex;
+  max-width: 890px;
+  margin: 0 auto;
+  align-items: center;
+  .col-img-6{
+    flex:1 1 50%;
+    text-align: center;
+    img{
+       margin: 45px 0 60px;
+    }
+  }
+  .im1 img{
+    height: 185px;
+  }
+  .im2 img{
+    height:218px;
+  }
+
+}
+.slide-notat{
+  background: #fff;
+  padding-bottom: 1.2rem;
+  h2{margin-bottom: 1rem;}
+  p{padding-bottom: 0.7rem;}
 }
 
 
