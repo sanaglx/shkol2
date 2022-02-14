@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="css/animated.css">
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Главная</title>
 </head>
@@ -39,7 +38,7 @@
 				<li><a href="">Наши проекты</a></li>
 				<li><a href="">Контакты</a></li>
 			</ul>
-			<a href="" class="btn white-btn mb16 modalx" id="modalx">Получить консультацию</a>
+			<a href="" class="btn white-btn mb16 modalx">Получить консультацию</a>
 		</nav>
 	</div>
 	<header class="header header-page">
@@ -49,7 +48,7 @@
 					<a href="" class="logo"><img src="img/logo.svg" alt="logo" data-animation="zoomIn"
 							data-delay=""></a>
 					<div class="top-block__text mb095m">СЕТЬ ЧАСТНЫХ ДЕТСКИХ САДОВ И ШКОЛ</div>
-					<button class="btn top-btn mb095m">Получить консультацию</button>
+					<button class="btn top-btn mb095m modalx">Получить консультацию</button>
 					<a href="tel:+74955792599" class="telf telf-top mb095m">+7 495 579-25-99</a>
 				</div>
 			</div>
@@ -72,8 +71,8 @@
 	</header>
 	<main class="main">
 		<div class="bkg-head-block" style="background-image: url(../img/bkg2.jpg);">
-			<div class="bkg-head-small-block">
-				<h1>ПАКЕТЫ ФРАНШИЗЫ</h1>
+			<div class="bkg-head-small-block" data-animation="zoomIn" data-delay="">
+				<h1 >ПАКЕТЫ ФРАНШИЗЫ</h1>
 			</div>
 		</div>
 
@@ -261,101 +260,70 @@
 			</div>
 
 			<div class="bt-lin"> © LITTLE PERSON 2022 г.</div>
-			<div class="bt-perfec-digital">Разработка сайта: <a target="_blank"
-					href="https://perfect-digital.ru">PERFECT DIGITAL</a></div>
+			<div class="bt-perfec-digital">Разработка сайта: <a target="_blank" href="https://perfect-digital.ru">PERFECT DIGITAL</a></div>
 		</div>
 
 	</footer>
-	<!-- <div class=" footer-bkg-5 ">
-		<div class="footer-bkg-5__text">Мы дадим Вам готовую бизнес-систему рабочие инструменты и нашу поддержку.</div>
-		<div class="footer-bkg-5__text up">ПРИСОЕДИНЯЙТЕСЬ К СЕМЬЕ LITTLE PERSON!</div>
-	</div> -->
+
 
 	<div class="modal modal-1">
-		<div class="container">
-			<div class="block mb64 pd40 blur">
-				<div class="modal-top"></div>
-				<a href="" class="close"><img src="img/ico/close.svg" alt=""></a>
-				<h2 class="h1 br19 mb48">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</h2>
-				<form action="" class="form1">
-					<div class="form-gorizontal">
-						<div class="gr-inp">
-							<input class="text error-x1" type="text" placeholder="Ваше имя">
-							<div class="error-text" style="display: none;">Введите ваше имя</div>
+		<div class="bkg-head-block max-head-block" style="background-image: url(../img/bkg2.jpg);">
+			<div class="container-abs">
+				<div class="row-2">
+					<div class="cl-6 multp" data-animation="bounceInLeft">
+						<div class="cl-6-block ">
+							<div class="h1">КОНТАКТЫ LITTLE PERSON </div>
+							<div class="cl-6-h3">
+								Задать вопрос Вы можете через форму, написав на почту или просто позвонив нам
+							</div>
+							<div class="cl-6-h3">
+								<div class="cl-6-url"><a href="tel:+74955792599">+7 495 579-25-99</a></div>
+								<div class="cl-6-url"><span>e-mail:</span><a href="mailto:info@ilovelp.ru">
+										info@ilovelp.ru</a>
+								</div>
+							</div>
 						</div>
-						<div class="gr-inp">
-							<input class="text" type="text" placeholder="Ваш телефон">
-						</div>
-						<div class="gr-inp">
-							<input class="text" type="text" placeholder="Ваш Email">
-						</div>
-						<button class="btn">Записаться</button>
 					</div>
-					<label class="checkbox-other ">
-						<input type="checkbox" checked="checked" class="check-1">
-						<span>Нажимая на кнопку, я подтверждаю своё согласие на условия обработки и использования
-							персональных
-							данных</span>
-					</label>
-				</form>
+					<div class="cl-6 blur" data-animation="bounceInRight" >
+						<a href="" class="close-m"><img src="img/ico/close.svg" alt=""></a>
+						<div class="h1">У ВАС ОСТАЛИСЬ ВОПРОСЫ? </div>
+						<form action="" class="form1">
+							<div class="form-gorizontal">
+								<div class="gr-inp">
+									<input class="text error-x1" type="text" placeholder="Ваше имя">
+									<div class="error-text" style="display: none;">Введите ваше имя</div>
+								</div>
+								<div class="gr-inp">
+									<input class="text" type="text" placeholder="E-mail">
+								</div>
+								<div class="gr-inp">
+									<input class="text error-x1" type="text" placeholder="Ваш телефон">
+									<div class="error-text" style="display: none;">Введите ваше имя</div>
+								</div>
+								<div class="gr-inp">
+									<input class="text" type="text" placeholder="Ваш город">
+								</div>
+								<button class="btn">Отправить</button>
+							</div>
+							<label class="checkbox-other ">
+								<input type="checkbox" checked="checked" class="check-1" value="1">
+								<span>
+									Нажимая на кнопку, я подтверждаю своё согласие на условия обработки и использования
+									персональных данных
+								</span>
+							</label>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
-
 	</div>
 
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/aos.js"></script>
 	<script src="js/animat.js"></script>
 	<script src="js/custom.js"></script>
-
-
-	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-
-	<script>
-		ymaps.ready(init);
-
-		function init() {
-			var myMap = new ymaps.Map("map", {
-				// Координаты центра карты
-				center: [55.962190568761244, 37.52750749999996],
-				// Масштаб карты
-				zoom: 16,
-				// Выключаем все управление картой
-				controls: []
-			});
-
-			var myGeoObjects = [];
-
-			// Указываем координаты метки
-			myGeoObjects = new ymaps.Placemark([55.962190568761244, 37.52750749999996], {
-				balloonContentBody: 'Частная школа',
-			}, {
-				iconLayout: 'default#image',
-				// Путь до нашей картинки
-				iconImageHref: '/img/logo.png',
-				// Размеры иконки
-				iconImageSize: [80, 70],
-				// Смещение верхнего угла относительно основания иконки
-				iconImageOffset: [-35, -35]
-			});
-
-			var clusterer = new ymaps.Clusterer({
-				clusterDisableClickZoom: false,
-				clusterOpenBalloonOnClick: false,
-			});
-
-			clusterer.add(myGeoObjects);
-			myMap.geoObjects.add(clusterer);
-			// Отключим zoom
-			myMap.behaviors.disable('scrollZoom');
-
-		}
-	</script>
-
-
-
 </body>
 
 </html>

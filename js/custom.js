@@ -110,7 +110,7 @@ $(".radio-button input[name='radio']").click(function(){
     }
 })
 
-$("#modalx").click(function (){
+$(".modalx").click(function (){
      var a = $(".modal-1");
      if(!$(a).hasClass('active')){
          $(a).addClass('active');

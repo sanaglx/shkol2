@@ -11,6 +11,7 @@ $maxWidth: 1900;
         font-size: $pcSize + px;
     }
 }
+
 .container {
     max-width: $maxWidth1 + px;
     margin: 0 auto;
@@ -52,7 +53,6 @@ main {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(9px);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 19px;
 }
 
 .teni {
@@ -79,6 +79,7 @@ main {
 a {
     color: #1d4f95;
     text-decoration: none;
+    transition: 0.3s all;
     &:hover {
         color: var(--hover);
     }
@@ -247,4 +248,14 @@ input.text {
 .checkbox-other input[type="checkbox"]:disabled + span:before {
     filter: grayscale(100%);
     opacity: 0.6;
+}
+.close-m{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    img{width: 37.6px;} 
+    opacity: 0.6;
+    &:hover{
+       opacity: 1;
+    } 
 }
