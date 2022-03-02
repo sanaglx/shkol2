@@ -1,6 +1,6 @@
 @import "fonts";
 :root {
-  --hover: #f8eaa9;
+  --hover: #ff8f4e;
   /* --hover:#f0b90d;*/
   --blue: #0069AF;
   --bkgblue: #0069AF;
@@ -43,6 +43,9 @@ body {
 .header{
     background: url(../img/bkg-top.jpg) center no-repeat;
     background-size: cover;
+    &-page{
+      background: #fff;
+    }
 }
 .header-page .top-block__text{
   max-width:100%;
@@ -304,12 +307,18 @@ body {
   }
 }
 .form-offer {
-  margin-bottom: 2.6rem;
+  margin-bottom: 0.6rem;
 }
 .form-gorizontal {
   margin-bottom: 1.2rem;
   
 }
+.form1{
+  .gr-inp input{
+    margin-bottom: 15px;
+  }
+}
+
 .gr-inp {
   input{
     font-size: 15px;
@@ -428,6 +437,7 @@ body {
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 5px;
+    color:var(--blue);
   }
   li{
     font-weight: 400;
@@ -542,7 +552,7 @@ body {
 .bg2{background: url(../img/bg2.jpg);}
 .bg3{background: url(../img/bg3.jpg);}
 .bg1,.bg2,.bg3{
-  /*background-size: cover;*/
+  background-size:100%;
   width: 100%;
 }
 
@@ -751,14 +761,14 @@ body {
     @include font(21,18);
     line-height: 1.7rem;
     color:var(--blue);
-    margin: 0 0 1.3rem 0;
+    margin: 0 0 1.5rem 0;
     i{display: block;font-style: normal;}
     
   }
   .prefoot-url a{
     font-weight: 900;
     @include font(21,18);
-    line-height: 1.7rem;
+    line-height: 1.9rem;
     color:var(--blue);
   }
 }
@@ -855,7 +865,7 @@ body {
 .bkg-head-small-block{
   max-width: 1170px;
   background: #00395E;
-  mix-blend-mode: hard-light;
+  mix-blend-mode: multiply;
   width: 100%;
   margin: 0 5%;
   h1{
@@ -882,7 +892,7 @@ body {
   &__text p {
     @include font(17,15);
     line-height: 1.4;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 1rem;
     letter-spacing: -0.1px;
   }
@@ -892,7 +902,7 @@ body {
     line-height: 1.2;
     text-transform: uppercase;
     margin-bottom: 3.2rem;
-    font-weight: 600;
+    font-weight: 900;
     color:var(--blue);
   }
 
@@ -1020,8 +1030,10 @@ body {
 
 }
 .cl-6.multp{
-  background: #00395E;
-  opacity: 0.85;
+ /* background: #00395E;*/
+  background: #0069AF;
+ /* opacity: 0.85 !important;*/
+  mix-blend-mode: multiply;
 }
 
 

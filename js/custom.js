@@ -193,7 +193,7 @@ $('.hpala').click(function(){
 
 function parallax1(event) {
 
-    this.querySelectorAll('.prlx1').forEach(prlx1 => {
+    this.querySelectorAll('.prlx2').forEach(prlx1 => {
       let speed=prlx1.getAttribute('data-speed')
        // prlx1.style.transform =`translateY(${event.clientY*speed/1000}px)`
     //prlx1.style.transform =`translateY(${event.clientY/50}px)`
@@ -207,17 +207,6 @@ function parallax1(event) {
 }
 document.addEventListener('mousemove',parallax1)
 //window.addEventListener('scroll',parallax1)
-
-
-// AOS.init({
-//     disable: function () {
-//       var maxWidth = 768;
-//       return window.innerWidth < maxWidth;
-//     }
-//   });
-
-
-
 
 
 
