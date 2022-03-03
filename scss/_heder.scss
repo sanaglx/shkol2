@@ -27,17 +27,17 @@
     .nav-mobi-top{
         list-style: none;
         margin: -6px 0 0 0;padding: 8px 0 0 0;
-        max-height: calc(100vh - 110px);
+        max-height: calc(100vh - 123px);
         margin-bottom: 20px;
         overflow: auto;
     }
     .nav-mobi-h{
         display: flex;
         align-items: center;
-        height: 36px;
+        height: 52px;
         .tel-mini{margin-right: 12px;padding-top: 4px;}
         .logo{margin: 0;padding-top: 4px;
-            img{width: 32px;}
+            img{width: 48px;}
         }
     }
     .hpala{
