@@ -200,18 +200,20 @@
 						<div class="lg-6">
 							<h2 class="h1">ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ ДЛЯ ОТКРЫТИЯ СВОЕГО БИЗНЕСА</h2>
 							<div class="form-offer">
-								<form action="" class="form1">
+								<form action="" class="form1 send-form">
 									<div class="form-gorizontal">
 										<div class="gr-inp">
-											<input class="text error-x1" type="text" placeholder="Ваше имя">
-											<div class="error-text" style="display: none;">Введите ваше имя</div>
+											<div class="error-text error-fio" style="display: none;">Введите ваше имя</div>
+											<input name="fio" class="text error-x1" type="text" placeholder="Ваше имя">
 										</div>
 										<div class="gr-inp">
-											<input class="text" type="text" placeholder="Ваш телефон">
+											<div class="error-text error-phone" style="display: none;">Введите ваш телефон</div>
+											<input name="phone" class="text" type="text" placeholder="Ваш телефон">
 										</div>
 										<button class="btn" >Получить консультацию</button>
 									</div>
 									<label class="checkbox-other ">
+										<div class="error-text error-chkg" style="display: none;">Требуется согласие</div>
 										<input type="checkbox" checked="checked" class="check-1">
 										<span>
 											Нажимая на кнопку, я подтверждаю своё согласие на условия обработки и
@@ -341,7 +343,7 @@
 								<li>Окупаемость <span>от 12 мес.</span> </li>
 							</ul>
 							<a href="" class="frn-btn">Подробнее</a>
-							<a href="" class="btn btn-frz">Оставить заявку</a>
+							<a href="" class="btn btn-frz modalx">Оставить заявку</a>
 						</div>
 					</div>
 					<div class="francise-block" data-animation="fadeInUp" data-delay="100">
@@ -359,7 +361,7 @@
 								<li>Окупаемость <span>от 12 мес.</span> </li>
 							</ul>
 							<a href="" class="frn-btn">Подробнее</a>
-							<a href="" class="btn btn-frz">Оставить заявку</a>
+							<a href="" class="btn btn-frz modalx">Оставить заявку</a>
 						</div>
 					</div>
 					<div class="francise-block" data-animation="fadeInUp" data-delay="200">
@@ -376,7 +378,7 @@
 								<li>Окупаемость <span>от 12 мес.</span> </li>
 							</ul>
 							<a href="" class="frn-btn">Подробнее</a>
-							<a href="" class="btn btn-frz">Оставить заявку</a>
+							<a href="" class="btn btn-frz modalx">Оставить заявку</a>
 						</div>
 					</div>
 				</div>
@@ -547,25 +549,28 @@
 								info@ilovelp.ru</a>
 						</div>
 					</div>
-					<form action="" class="form1">
+					<form action="" class="form1 send-form">
 						<div class="form-gorizontal">
 							<div class="gr-inp">
-								<input class="text error-x1" type="text" placeholder="Ваше имя">
-								<div class="error-text" style="display: none;">Введите ваше имя</div>
+								<div class="error-text error-fio" style="display: none;">Введите ваше имя</div>
+								<input name="fio" class="text error-x1" type="text" placeholder="Ваше имя">
 							</div>
 							<div class="gr-inp">
-								<input class="text" type="text" placeholder="E-mail">
+								<div class="error-text error-eml" style="display: none;">Введите ваш e-mail</div>
+								<input name="eml" class="text" type="text" placeholder="E-mail">
 							</div>
 							<div class="gr-inp">
-								<input class="text error-x1" type="text" placeholder="Ваш телефон">
-								<div class="error-text" style="display: none;">Введите ваше имя</div>
+								<div class="error-text error-phone" style="display: none;">Введите ваш телефон</div>
+								<input name="phone" class="text error-x1" type="text" placeholder="Ваш телефон">
 							</div>
 							<div class="gr-inp">
-								<input class="text" type="text" placeholder="Ваш город">
+								<div class="error-text error-gorod" style="display: none;">Введите ваш город</div>
+								<input name="gorod" class="text" type="text" placeholder="Ваш город">
 							</div>
 							<button class="btn">Получить консультацию</button>
 						</div>
 						<label class="checkbox-other ">
+							<div class="error-text error-chkg" style="display: none;">Требуется согласие</div>
 							<input type="checkbox" checked="checked" class="check-1" value="1">
 							<span>
 								Нажимая на кнопку, я подтверждаю своё согласие на условия обработки и использования
@@ -685,26 +690,29 @@
 					<div class="cl-6 blur" data-animation="bounceInRight" >
 						<a href="" class="close-m"><img src="img/ico/close.svg" alt=""></a>
 						<div class="h1">У ВАС ОСТАЛИСЬ ВОПРОСЫ? </div>
-						<form action="" class="form1">
+						<form action="" class="form1 send-form">
 							<div class="form-gorizontal">
 								<div class="gr-inp">
-									<input class="text error-x1" type="text" placeholder="Ваше имя">
-									<div class="error-text" style="display: none;">Введите ваше имя</div>
+									<div class="error-text error-fio" style="display: none;">Введите ваше имя</div>
+									<input name="fio" class="text error-x1" type="text" placeholder="Ваше имя">
 								</div>
 								<div class="gr-inp">
-									<input class="text" type="text" placeholder="E-mail">
+									<div class="error-text error-eml" style="display: none;">Введите ваш e-mail</div>
+									<input name="eml" class="text" type="text" placeholder="E-mail">
 								</div>
 								<div class="gr-inp">
-									<input class="text error-x1" type="text" placeholder="Ваш телефон">
-									<div class="error-text" style="display: none;">Введите ваше имя</div>
+									<div class="error-text error-phone" style="display: none;">Введите ваш телефон</div>
+									<input name="phone" class="text error-x1" type="text" placeholder="Ваш телефон">
 								</div>
 								<div class="gr-inp">
-									<input class="text" type="text" placeholder="Ваш город">
+									<div class="error-text error-gorod" style="display: none;">Введите ваш город</div>
+									<input class="text" type="text" name="gorod" placeholder="Ваш город">
 								</div>
 								<button class="btn">Отправить</button>
 							</div>
 							<label class="checkbox-other ">
-								<input type="checkbox" checked="checked" class="check-1" value="1">
+								<div class="error-text error-chkg" style="display: none;">Требуется согласие</div>
+								<input name="chkg" type="checkbox" checked="checked" class="check-1" value="1">
 								<span>
 									Нажимая на кнопку, я подтверждаю своё согласие на условия обработки и использования
 									персональных данных
