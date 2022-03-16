@@ -195,18 +195,92 @@ function parallax1(event) {
 
     this.querySelectorAll('.prlx2').forEach(prlx1 => {
       let speed=prlx1.getAttribute('data-speed')
-       // prlx1.style.transform =`translateY(${event.clientY*speed/1000}px)`
-    //prlx1.style.transform =`translateY(${event.clientY/50}px)`
-    //prlx1.style.backgroundPositionX =`background-position-x(${event.clientY/50}px)`
     prlx1.style.backgroundPositionY =`${event.clientY/40+0}px`
     prlx1.style.backgroundPositionX =`${event.clientX/40-95}px`
-    
-        
   });
     
 }
 document.addEventListener('mousemove',parallax1)
-//window.addEventListener('scroll',parallax1)
+
+$(document).ready(function(){
+
+    $(".close-m").click(function() {
+        //$('.check-1').prop('checked');
+        $(".modal").removeClass('active');
+        $(".teni").removeClass('active');
+        $(".error-text").hide();
+        return false;
+    })
+
+// forma
+	$(".send-form").each(function (i,elem) {	
+		var arr_inputs = $(elem).find('input[type=text]');
+        var arr_inputs_chk = $(elem).find('input[type=checkbox]');
+
+		$(arr_inputs).each(function(i_,input_){
+            $(input_).on('click focus',function(e){
+				$(this).parent().find('.error-'+$(this).attr('name')).hide();
+			})
+        })
+        $(arr_inputs_chk).each(function(i_,input__){
+            $(input__).on('click focus',function(e){
+				$(this).parent().find('.error-'+$(this).attr('name')).hide();
+			})
+        })
+	
+		$(elem).off('submit');
+		$(elem).on('submit', function (e) {
+			
+			var form_valid = true;
+
+			$(arr_inputs).each(function(i_,input_){
+				
+//				alert('a');
+				
+				if($(input_).val()=='' && $(this).attr('name')!='email'){
+					$(input_).parent().find('.error-'+$(this).attr('name')).show();
+					form_valid = false;
+                }else{
+				    $(input_).parent().find('.error-'+$(this).attr('name')).hide();
+				}
+			})
+			
+			if($(elem).find('.check-1').prop('checked')==false){
+				form_valid = false;
+                //var aa=$(elem).find('.check-1')
+				//alert('Требуется согласие!');
+                $(elem).find('.check-1').parent().find('.error-chkg').show();
+			}
+
+			
+			// if (form_valid) {
+			// 	e.preventDefault();
+			// 	$.ajax({
+			// 		type: "POST",
+			// 		url: '/send-mail.php',
+			// 		data: $(elem).serialize(),
+			// 		success: function (response) {
+			// 			if(response=='Success'){
+			// 				alert('Успешно отправлено!');
+			// 			}else{
+			// 				alert(response);
+			// 			}
+			// 		}
+			// 	});
+
+			// } else {
+				
+			// }
+			
+			return false;
+			
+		});
+
+
+	})
+	
+})
+
 
 
 
